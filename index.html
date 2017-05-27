@@ -321,18 +321,14 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/27/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -441,122 +437,14 @@
 
       
         
-          
-            <h4 id="什么是注解"><a href="#什么是注解" class="headerlink" title="什么是注解"></a>什么是注解</h4><p>​    Annotation（注解）就是Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。Annotation是一个接口，程序可以通过反射来获取指定程序元素的Annotation对象，然后通过Annotation对象来获取注解里面的元数据。</p>
-<p>​    Annotation(注解)是JDK5.0及以后版本引入的。它可以用于创建文档，跟踪代码中的依赖性，甚至执行基本编译时检查。从某些方面看，annotation就像修饰符一样被使用，并应用于包、类型、构造方法、方法、成员变量、参数、本地变量的声明中。这些信息被存储在Annotation的“name = value”结构对中。</p>
-<h4 id="什么是metadata元数据"><a href="#什么是metadata元数据" class="headerlink" title="什么是metadata元数据"></a>什么是metadata元数据</h4><p>​    元数据从metadata一词译来，就是“关于数据的数据”的意思。</p>
-<p>​    元数据的功能作用有很多，比如：你可能用过Javadoc的注释自动生成文档。这就是元数据功能的一种。总的来说，元数据可以用来创建文档，跟踪代码的依赖性，执行编译时格式检查，代替已有的配置文件。如果要对元数据的作用进行分类，目前还没有明确的定义，不过我们可以根据它所起的作用，大致可分为三类：</p>
-<ol>
-<li><strong>编写文档</strong>：通过代码里标识的元数据生成文档</li>
-<li><strong>代码分析</strong>：通过代码里标识的元数据对代码进行分析</li>
-<li><strong>编译检查</strong>：通过代码里标识的元数据让编译器能实现基本的编译检查</li>
-</ol>
-<h4 id="Annotation和Annotation类型"><a href="#Annotation和Annotation类型" class="headerlink" title="Annotation和Annotation类型"></a>Annotation和Annotation类型</h4><p>​    Annotation使用了在java5.0所带来的新语法，它的行为十分类似public、final这样的修饰符。每个Annotation具有一个名字和成员(个数&gt;=0)。每个Annotation的成员具有被称为name=value对的名字和值（就像javabean一样），name = value装载了Annotation的信息。</p>
-<p>​    Annotation类型定义了Annotation的名字、类型、成员默认值。一个Annotation类型可以说是一个特殊的Java接口，它的成员变量是受限制的，而声明Annotation类型时需要使用新语法。当我们通过Java反射api访问Annotation时，返回值将是一个实现了该annotation类型接口的对象,通过访问这个对象我们能方便的访问到其Annotation成员。后面的章节将提到在java5.0的java.lang包里包含的3个标准Annotation类型。</p>
-<h4 id="注解的分类"><a href="#注解的分类" class="headerlink" title="注解的分类"></a>注解的分类</h4><p>​    根据注解的参数个数分类：</p>
-<ol>
-<li>标记注解，一个没有成员的Annotation类型被称为标记注解，这种类型仅仅使用自身的存在与否来为我们提供信息，比如常见的@Override</li>
-<li>单值注解</li>
-<li>完整注解</li>
-</ol>
-<p>​        根据注解使用的方法和用途分类：</p>
-<p>1.JDK内置系统注解</p>
-<p>2.元注解</p>
-<p>3.自定义注解</p>
-<h4 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h4><p>​    元注解的作用就是负责注解其他注解，Java5.0定义了4个meta-annotation类型，用来提供对他的annotation类型做说明。</p>
-<p><strong>java.lang.annotation</strong></p>
-<ul>
-<li><em>@Target</em></li>
-<li><em>@Retention</em></li>
-<li><em>@Document</em></li>
-<li><em>@Inhrited</em></li>
-</ul>
-<p>@Target</p>
-<p><strong>修饰的对象范围</strong>：packages、types(类、接口、枚举、Annotation类型)、类型成员（方法、构造方法、成员变量、枚举值）、方法参数和本地变量（如循环变量、catch参数）。</p>
-<p><strong>作用</strong>：用于描述注解的使用范围。</p>
-<p>ElementType取值：</p>
-<ol>
-<li><strong>CONSTRUCTOR：</strong>用于描述构造器</li>
-<li><strong>FIELD:</strong>用于描述作用域</li>
-<li><strong>LOCAL_VARIAVLE:</strong>用于描述局部变量</li>
-<li><strong>METHOD:</strong>用于描述方法</li>
-<li><strong>PACKAGE：</strong>用于描述包</li>
-<li><strong>PARAMETER:</strong>用于描述参数</li>
-<li><strong>TYPE:</strong>用于描述类、接口（包括注解类型）或enum声明</li>
-</ol>
-<p>​        例如，Name可以注解类的成员变量：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)<span class="meta">@Document</span></div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Name&#123;</div><div class="line">	<span class="function">String <span class="title">value</span><span class="params">()</span><span class="keyword">default</span> ""</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>​        Person可以注解类、接口（包括注解类型）、或者enum声明：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Target</span>(ElementType.Type)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Person&#123;</div><div class="line">	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>@Retention</p>
-<p>​        <strong>定义了该Annotation被保留的时间长短：</strong>某些Annotation仅出现在源代码中，而被编译器丢弃；而另一些却被编译在class文件中；编译在class文件中的Annotation可能会被虚拟机忽略，而另一些在class被卸载时将读取（请注意并不影响class的执行，因为Annotation与class在使用上是被分离的）。使用这个meta-Annotation可以对Annotation的“生命周期”限制。</p>
-<p>​    <strong>作用：</strong>表示需要在什么级别保存该注释信息，用于描述注解的生命周期（即：被描述的注解在什么范围内有效）</p>
-<p>​    <strong>RetentionPoicy</strong>取值：</p>
-<ul>
-<li><strong>SOURCE:</strong>在源文件中有效（即源文件保留）</li>
-<li><strong>CLASS:</strong>在class文件中有效（即class保留）</li>
-<li><strong>RUNTIME:</strong>在运行时有效（即运行时保留）</li>
-</ul>
-<p>​        例如：Name注解的RetentionPolicy的值为RUNTIME，这样注解处理器可以通过反射，获取到该注解的属性，从而做一些运行时的逻辑处理。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)</div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Name&#123;</div><div class="line">	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>@Document</p>
-<p>​    用于描述其它类型的annotation应该被作为被标注的程序成员的公共API,因此可以被例如javadoc此类的工具文档化。Documented是一个标记注解，没有成员。</p>
-<p><strong>作用：</strong>表示需要在什么级别保存该注释信息，用于描述注解的生命周期（即：被描述的注解在什么范围内有效）。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)</div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="meta">@DOCUMNET</span></div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Name&#123;</div><div class="line">  	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>@Inhrited</p>
-<p>​    是一个标记注解，@Inherited阐述了某个被标注的类型是被继承的。如果一个使用了@Inherited修饰的annotation类型被用于一个class,则这个annotation将被用于该class的子类。</p>
-<p>​        @Inherited annotation类型是被标注过的class的子类所继承。类并不从它所实现的接口继承annotation,方法并不从它所重载的方法继承annotation</p>
-<p>​    当@Inherited annotation类型标注的annotation的Retention是<strong>RetentionPolicy.RUNTIME</strong>,则反射API增强了这种继承性。如果我们使用java.lang.reflect去查询一个@Inherited annotation类型的annotation时，反射代码检查将展开工作：检查class和其父类，直到发现指定的annotation类型被发现，或者到达类继承结构的顶层。</p>
-<h4 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h4><p>​    当使用@interface自定义注解时，自动继承了java.lang.annotation.Annotation接口，由编译程序自动完成其他细节。在定义注解时，不能继承其他的注解或接口。@interface用来声明一个注解，其中的每一个方法实际上是声明了一个配置参数。方法的名词就是参数的名称，返回值类型就是参数的类型（返回值类型只能是基本类型、Class、String、Enum）。可以通过default来声明参数的默认值。</p>
-<p>​    自定义注解格式：</p>
-<p>public @interface 注解名{注解体}</p>
-<ul>
-<li>所有基本数据类型（int,float,boolean,byte,double,char,long,short）</li>
-<li>String类型</li>
-<li>Class类型</li>
-<li>enum类型</li>
-<li>Annotation类型</li>
-<li>以上所有类型的数组</li>
-</ul>
-<p>​        Annotation类型里面的参数该怎么设定：</p>
-<ul>
-<li>第一，只能用public或默认（default）这两个访问权限修饰符修饰，例如，String value();这里把方法设为default默认类型；</li>
-<li>第二，参数成员只能用基本类型byte，short,char,int,long,float,double,boolean八种基本数据类型和String，Enum,Class,annotations等数据类型，以及这一些类型数据的数组。例如，String value()；这里的参数成员就为String;</li>
-<li>第三，如果只有一个参数成员，最好把参数名称设为“value”,后加小括号。例：下面的例子Name注解就只有一个参数成员。</li>
-</ul>
-<p>​        <strong>Name</strong> 姓名注解：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 姓名注解</div><div class="line"> */</div><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)</div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="meta">@Documented</span></div><div class="line">puclic <span class="meta">@interface</span> Name&#123;</div><div class="line">  	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>​    <strong>Gender</strong>性别注解：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 性别注解</div><div class="line"> */</div><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)</div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="meta">@Documented</span></div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Gender&#123;</div><div class="line">  	<span class="keyword">public</span> <span class="keyword">enum</span> GenderType&#123;</div><div class="line">		Male(<span class="string">"男"</span>)，</div><div class="line">		Female(<span class="string">"女"</span>)，</div><div class="line">		Other(<span class="string">"中性"</span>);</div><div class="line">		<span class="function"><span class="keyword">private</span> <span class="title">GenderType</span><span class="params">(String arg0)</span></span>&#123;</div><div class="line">			<span class="keyword">this</span>.genderStr = arg0;</div><div class="line">		&#125;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>&#123;</div><div class="line">          	<span class="keyword">return</span> genderStr;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="function">GenderType <span class="title">gender</span><span class="params">()</span> <span class="keyword">default</span> GenderType.Male</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>​    <strong>Profile</strong>个人资料注解：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 基本资料注解</div><div class="line"> */</div><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)</div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="meta">@Documented</span></div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Profile&#123;</div><div class="line">  	<span class="comment">/**</span></div><div class="line"> 	 * ID</div><div class="line"> 	 */</div><div class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">id</span><span class="params">()</span> <span class="keyword">default</span> -1</span>;</div><div class="line"> 	<span class="comment">/**</span></div><div class="line"> 	 * 身高</div><div class="line"> 	 */</div><div class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">height</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</div><div class="line">  	<span class="comment">/**</span></div><div class="line">  	 * 籍贯</div><div class="line"> 	 */</div><div class="line"> 	 <span class="function"><span class="keyword">public</span> String <span class="title">nativePlace</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="注解元素的默认值"><a href="#注解元素的默认值" class="headerlink" title="注解元素的默认值"></a>注解元素的默认值</h4><p>​    注解元素必须有确定的值，要么在定义注解的默认值中指定，要门在使用注解时指定，非基本类型的注解元素的值不可为null。因此，使用空字符串或0作为默认值是一种常用的做法，这个约束使得处理器很难表现一个元素的存在或缺失的状态，因为每个注解的声明中，所有元素都存在，并且都具有相应的值，为了绕开这个约束，我们只能定义一些特殊的值，例如空字符串或者负数，一次表示某个元素不存在，在定义注解时，这已经成为一个习惯用法。</p>
-<h4 id="注解处理器类库（java-lang-reflect-AnnotatedElement）"><a href="#注解处理器类库（java-lang-reflect-AnnotatedElement）" class="headerlink" title="注解处理器类库（java.lang.reflect.AnnotatedElement）"></a>注解处理器类库（java.lang.reflect.AnnotatedElement）</h4><p>​    注解元素java使用Annotation接口来代表程序元素前面的注解，该接口是所有Annotation类型的父接口。除此之外，Java在java.lang.reflect包下新增了AnnotatedElement接口，该接口代表程序中可以接受注解的程序元素，该接口主要有如下几个实现类：</p>
-<ul>
-<li><strong>Class:</strong>类定义</li>
-<li><strong>Constructor:</strong>构造器定义</li>
-<li><strong>FIeld:</strong>类的成员变量定义</li>
-<li><strong>Method:</strong>类的方法定义</li>
-<li><strong>Package:</strong>类的包定义</li>
-</ul>
-<p>​        当一个Annotation被定义为运行时Annotation后，该注解才是运行时可见的，当class文件被装载是被保存在class文件中的Annotation才会被虚拟机读取。</p>
-<p>​    AnnotationElement接口提供了一下四个方法来访问Annotation的信息：</p>
-<ul>
-<li>方法1：<t extends="" annotation=""> T getAnnotation(Class<t> annotationClass):返回该程序元素上存在的、指定类型的注解，如果该类型注解不存在，则返回null。</t></t></li>
-<li>方法2：Annotation[] getAnnotations()：返回该程序元素上存在的所有注解。</li>
-<li>方法3：boolean is AnnotationPresent(Class&lt;?extends Annotation&gt; annotationClass):判断该程序元素上是否包含指定类型的注解，存在返回true,否则返回false。</li>
-<li>方法4：Annotation[] getDeclaredAnnotations():返回直接存在与此元素上的所有注释。与此接口中的其他方法不同，该方法将忽略继承的注释（如果没有注释直接存在与此元素上，则返回长度为零的一个数组。）该方法的调用者可以随意修改返回的数组；这不会对其他调用者返回的数组产生任何影响。</li>
-</ul>
-<p>​        我们为前面定义好的自定义注解写一个简单的处理器：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomUtils</span></span>&#123;</div><div class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getInfo</span><span class="params">(Class&lt;?&gt; clazz)</span></span>&#123;</div><div class="line">		String name = <span class="string">""</span>;</div><div class="line">		String gender = <span class="string">""</span>;</div><div class="line">		String profile = <span class="string">""</span>;</div><div class="line">		Field fields[] = clazz.getDeclaredFields();</div><div class="line">		<span class="keyword">for</span>(Field field : fields)&#123;</div><div class="line">          	<span class="keyword">if</span>(field.isAnnotationPresent(Name.class))&#123;</div><div class="line">             	 Name arg0 = field.getAnnotation(Name.class);</div><div class="line">             	 name = name + arg0.value();</div><div class="line">             	 Log.i(<span class="string">"Flame"</span>,<span class="string">"name="</span> + name);</div><div class="line">          	&#125;</div><div class="line">          	<span class="keyword">if</span>(field.isAnnotationPresent(Gender.class))&#123;</div><div class="line">            	 Gender arg0 = field.getAnnotation(Gender.class);</div><div class="line">             	 gender = gender + arg0.gender().toString();</div><div class="line">             	 Log.i(<span class="string">"Flame"</span>,<span class="string">"gender="</span> + gender);</div><div class="line">          	&#125;</div><div class="line">          <span class="keyword">if</span>(field.isAnnotationPresent(Profile.class))&#123;</div><div class="line">              Profile arg0 = field.getAnnotation(Profile.class);</div><div class="line">              profile = <span class="string">"[id="</span>+arg0.id() + <span class="string">",height="</span></div><div class="line">                      + arg0.height() + <span class="string">",nativePlace="</span></div><div class="line">                      + arg0.nativePlace() + <span class="string">"]"</span>;</div><div class="line">              Log.i(<span class="string">"Flame"</span>,<span class="string">"profile="</span> + profile);</div><div class="line">          	&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>​    使用自定义注解：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</div><div class="line">  	<span class="meta">@Name</span>(<span class="string">"阿特罗伯斯"</span>)</div><div class="line">  	<span class="keyword">private</span> String name;</div><div class="line">  	<span class="meta">@Name</span>(gender = Gender.GenderType.Male)</div><div class="line">  	<span class="keyword">private</span> String gender;</div><div class="line">    <span class="meta">@Name</span>(id = <span class="number">1001</span>, height = <span class="number">180</span>, nativePlace = <span class="string">"CN"</span>)</div><div class="line">  	<span class="keyword">private</span> String profile;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</div><div class="line">      	<span class="keyword">return</span> name;</div><div class="line">	&#125; </div><div class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span></span>&#123;</div><div class="line">      	<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line">  	<span class="function"><span class="keyword">public</span> String <span class="title">getGender</span><span class="params">()</span></span>&#123;</div><div class="line">      	<span class="keyword">return</span> gender;</div><div class="line">	&#125; </div><div class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setProfile</span><span class="params">(String gender)</span></span>&#123;</div><div class="line">      	<span class="keyword">this</span>.gender = gender;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getProfile</span><span class="params">()</span></span>&#123;</div><div class="line">      	<span class="keyword">return</span> profile;</div><div class="line">	&#125; </div><div class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setProfile</span><span class="params">(String profile)</span></span>&#123;</div><div class="line">      	<span class="keyword">this</span>.profile = profile;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>运行：</p>
-<p>​    CustomUtils.getInfo(Person.class);</p>
-<p>输出：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">I/Flame:gender = 男</div><div class="line">I/Flame:name = 阿特罗伯斯</div><div class="line">I/Flame:profile = [id=<span class="number">1001</span>，height=<span class="number">180</span>,nativePlace=cn]</div></pre></td></tr></table></figure>
-
-          
+          <h4 id="什么是注解"><a href="#什么是注解" class="headerlink" title="什么是注解"></a>什么是注解</h4><p>​    Annotation（注解）就是Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。Annotation是一个接口，程序可以通过反射来获取指定程序元素的Annotation对象，然后通过Annotation对象来获取注解里面的元数据。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/04/自定义注解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
